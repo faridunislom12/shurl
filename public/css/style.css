@@ -1,0 +1,81 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+.bg-brown {
+    background: #69231C;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.carousel-item-content {
+    position: absolute;
+    top: 25%;
+    right: 0;
+}
+.divider {
+    height: 7em;
+}
+.bg-linear-light {
+    background: linear-gradient(180.05deg, #FFFFFF 10.74%, #F8F8F8 10.82%, #F8F8F8 99.96%);
+}
+.img-custom-shadow {
+    box-shadow: 149px -75px 0px #E5E5E5;
+}
+.img-custom-shadow-start {
+    box-shadow: -149px -75px 0px #E5E5E5;
+
+}
+.feedback-input {
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid #ced4da;
+}
+.az-icon-head {
+    width: 41px;
+    height: 41px;
+}
+
+.nav-pills .az-nav-link.active, .nav-pills .show>.az-nav-link {
+    color: #fff;
+    background-color: #333333;
+}
+.nav-pills .az-nav-link {
+    border: 2px solid #333333;
+    color: #333;
+}
+
+/* slider */
+a.carousel-control-prev, a.carousel-control-next {
+    height: 60px;
+    background-color: #333333;
+    width: 60px;
+    opacity: 1;
+    border: 2px solid #333;
+}
+
+.az-navs-slider {
+    z-index: 999;
+    position: absolute;
+    bottom: 31px;
+    right: 31px;
+    width: 140px;
+}
+
+
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover {
+    opacity: 1;
+}
+/* end slider */
+
+.az-add-product {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.9s linear;
+    height: 0;
+}
+.bg-linear-light:hover  .az-add-product {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+}

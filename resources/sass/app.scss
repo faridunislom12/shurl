@@ -1,0 +1,24 @@
+// Variables
+@import 'variables';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import "style";
+// font awesome
+// @import "node_modules/font-awesome/scss/font-awesome.scss";
+// @import '.\fonts\feather\feather.css'
+@mixin roundBorder($color) {
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: $color;
+    font-weight: 500;
+}
+
+.custom-rounded-top {
+    border-top-left-radius: 0.7rem !important;
+    border-top-right-radius: 0.7rem !important;
+    height: 148px;
+    object-fit: cover;
+}
+
+$greenColor: #00ad79;
+$orangeColor: #FFBA49;
