@@ -6133,11 +6133,8 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         // if (this.auth.login.match(/^\d{9}$/)) {
         axios.post(route('auth.sign-in'), this.auth).then(function (response) {
-          console.log('response');
-          console.log(response.data.status);
-
           if (response.data.status === 'signed') {
-            window.location.href = route('urls.index');
+            window.location.href = route('index');
           }
         })["catch"](function (error) {
           console.log(error); // this.message = error.response.data.message
@@ -6562,6 +6559,11 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
+//
+//
+//
+//
 //
 //
 //
@@ -89586,7 +89588,30 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "main-content" }, [
-    _vm._m(0),
+    _c("div", { staticClass: "header" }, [
+      _c("div", { staticClass: "container-fluid" }, [
+        _c("div", { staticClass: "header-body" }, [
+          _c("div", { staticClass: "row align-items-end" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-auto" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-danger lift",
+                  attrs: { href: _vm.route("logout") }
+                },
+                [
+                  _vm._v(
+                    "\n                        Выход\n                    "
+                  )
+                ]
+              )
+            ])
+          ])
+        ])
+      ])
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "container-fluid" }, [
       _c("form", { staticClass: "mb-4" }, [
@@ -89805,25 +89830,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "header" }, [
-      _c("div", { staticClass: "container-fluid" }, [
-        _c("div", { staticClass: "header-body" }, [
-          _c("div", { staticClass: "row align-items-end" }, [
-            _c("div", { staticClass: "col" }, [
-              _c("h6", { staticClass: "header-pretitle" }, [
-                _vm._v(
-                  "\n                            Сервис коротких ссылок\n                        "
-                )
-              ]),
-              _vm._v(" "),
-              _c("h1", { staticClass: "header-title" }, [
-                _vm._v(
-                  "\n                            Ссылки\n                        "
-                )
-              ])
-            ])
-          ])
-        ])
+    return _c("div", { staticClass: "col" }, [
+      _c("h6", { staticClass: "header-pretitle" }, [
+        _vm._v(
+          "\n                            Сервис коротких ссылок\n                        "
+        )
+      ]),
+      _vm._v(" "),
+      _c("h1", { staticClass: "header-title" }, [
+        _vm._v("\n                            Ссылки\n                        ")
       ])
     ])
   },

@@ -72,10 +72,8 @@
                     // if (this.auth.login.match(/^\d{9}$/)) {
                     axios.post(route('auth.sign-in'), this.auth)
                         .then(response => {
-                            console.log('response')
-                            console.log(response.data.status)
                             if (response.data.status === 'signed') {
-                                window.location.href = route('urls.index')
+                                window.location.href = route('index')
                             }
                         })
                         .catch(error => {

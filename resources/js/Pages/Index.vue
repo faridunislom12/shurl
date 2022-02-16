@@ -11,6 +11,11 @@
                             <h1 class="header-title">
                                 Ссылки
                             </h1></div>
+                        <div class="col-auto"><a
+                            :href="route('logout')"
+                            class="btn btn-danger lift">
+                            Выход
+                        </a></div>
                     </div>
                 </div>
             </div>

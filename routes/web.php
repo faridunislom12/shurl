@@ -24,6 +24,8 @@ Route::get('/{short}', [UrlController::class, 'open'])->name('urls.open');
 
 
 Route::middleware('auth')->group(function () {
+    Route::get('/', [UrlController::class, 'index'])->name('index');
+
     Route::group(['prefix' => 'admin'], function () {
 
         Route::get('logout', function () {
@@ -31,7 +33,6 @@ Route::middleware('auth')->group(function () {
             return redirect(route('auth.login'));
         })->name('logout');
 
-        Route::get('/', [UrlController::class, 'index'])->name('urls.index');
 
 
         $permission_actions = array(
