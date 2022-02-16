@@ -26,7 +26,7 @@ class UrlFactory extends Factory
     {
         return [
             'user_id' => \App\Models\User::all()->random(),
-            'short' => $this->faker->url,
+            'short' => $this->faker->regexify('[A-Za-z0-9]{20}'),
             'long' => $this->faker->url,
             'is_active' => $this->faker->boolean,
         ];

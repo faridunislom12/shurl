@@ -86,7 +86,11 @@ class UrlController extends Controller
     public function open($short)
     {
         $url = Url::where('short', $short)->first();
-        return redirect($url->long);
+        if ($url->is_active) {
+            return redirect($url->long);
+        } else {
+            abort(404);
+        }
     }
 
 }
