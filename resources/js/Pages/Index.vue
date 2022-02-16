@@ -177,8 +177,6 @@ export default {
                         )
                 }
             });
-
-
         },
         create_record: async function () {
             axios.post(route("urls.store"), this.url)
@@ -193,7 +191,6 @@ export default {
                         this.$swal('Ошибка', 'Введите корректные данные', 'error')
                     }
                 )
-
         }
     }
 

@@ -41,7 +41,7 @@ class UrlController extends Controller
         try {
             $validated = $request->validated();
             $validated['user_id'] = Auth::user()->id;
-            $validated['short'] = $this->shorten_link($validated['long']);
+            $validated['short'] = $this->shorten_link();
 
             $url = Url::create($validated);
 
